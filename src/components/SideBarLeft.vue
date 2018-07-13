@@ -13,25 +13,6 @@
 import anime from 'animejs'
 export default {
   name: 'SideBarLeft',
-  methods:{
-      openList: function() {
-      anime({
-        targets: document.querySelectorAll('.sidebar'),
-        translateY: {
-        value: ['-100%', 0],
-        duration: 600,
-        delay: function(el, i) { return i * 100 },
-        easing: [0.645, 0.045, 0.355, 1]
-        },
-        opacity: {
-        value: [0, 1],
-        duration: 400,
-        delay: 100,
-        easing: 'linear'
-        }
-      })
-    }
-  }
 }
 </script>
 

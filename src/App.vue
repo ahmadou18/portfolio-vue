@@ -42,7 +42,8 @@ export default {
   color: #2c3e50;
   display: flex;
   @media screen and (max-width: 1023px){
-    flex-direction: column;
+    // flex-direction: column;
+    overflow: auto;
   }
 }
 

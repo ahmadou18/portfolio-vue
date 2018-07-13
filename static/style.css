@@ -7,7 +7,7 @@ html,body {
 }
 @media screen and (max-width: 1023px){
     html,body{
-        overflow: auto;
+        overflow: scroll !important;
     }
 }
 *{
