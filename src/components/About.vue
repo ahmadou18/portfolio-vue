@@ -39,7 +39,6 @@ export default {
         translateY: {
         value: [0, '-100%'],
         duration: 600,
-        delay: function(el, i) { return i * 100 },
         easing: [0.645, 0.045, 0.355, 1]
         },
     })

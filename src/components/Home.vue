@@ -19,7 +19,6 @@ export default {
           translateY: {
           value: ['-100%', 0],
           duration: 700,
-          delay: function(el, i) { return i * 100 },
           easing: [0.645, 0.045, 0.355, 1]
           },
           opacity: {
