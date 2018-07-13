@@ -34,8 +34,6 @@ export default {
   mounted() {
     this.animation();
   },
-
-
   
   beforeDestroy() {
    anime({

@@ -2,22 +2,70 @@
   <section id="portfolio">
     <div class="anime-container">
     <div class="portfolio-container" ref="portfolio">
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        </div>
+        <swiper :options="swiperOption">
+        <swiper-slide>
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus recusandae reprehenderit voluptatem quas animi laborum tempore, aperiam unde culpa ratione at! Distinctio quo laudantium optio doloribus ratione ex. Repudiandae!</p>
+        </swiper-slide>
+        <swiper-slide>
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus recusandae reprehenderit voluptatem quas animi laborum tempore, aperiam unde culpa ratione at! Distinctio quo laudantium optio doloribus ratione ex. Repudiandae!</p>
+        </swiper-slide>
+        <swiper-slide>
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus recusandae reprehenderit voluptatem quas animi laborum tempore, aperiam unde culpa ratione at! Distinctio quo laudantium optio doloribus ratione ex. Repudiandae!</p>
+        </swiper-slide>
+        <swiper-slide>
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus recusandae reprehenderit voluptatem quas animi laborum tempore, aperiam unde culpa ratione at! Distinctio quo laudantium optio doloribus ratione ex. Repudiandae!</p>
+        </swiper-slide>
+        <swiper-slide>
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus recusandae reprehenderit voluptatem quas animi laborum tempore, aperiam unde culpa ratione at! Distinctio quo laudantium optio doloribus ratione ex. Repudiandae!</p>
+        </swiper-slide>
+        <swiper-slide>
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus recusandae reprehenderit voluptatem quas animi laborum tempore, aperiam unde culpa ratione at! Distinctio quo laudantium optio doloribus ratione ex. Repudiandae!</p>
+        </swiper-slide>
+        
+        
+        <div class="swiper-pagination" slot="pagination"></div>
+      </swiper>
+    </div>
     </div>
   </section>
 </template>
 
 <script>
 import anime from 'animejs';
+import 'swiper/dist/css/swiper.css'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+
 
 export default {
   name: 'Portfolio',
+  components: {
+        swiper,
+        swiperSlide
+      },
+
+  data() {
+      return {
+        swiperOption: {
+          effect: 'cube',
+          grabCursor: true,
+          cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94
+          },
+          pagination: {
+            el: '.swiper-pagination'
+          }
+        }
+      }
+    },
     methods:{
     animation: function () {
       anime({
@@ -66,20 +114,36 @@ export default {
     margin: 80px 150px 0 0;
 
   .portfolio-container {
-    overflow-y: auto;
+    position: relative;
     width: 100%;
     height: 100%;
-    .project {
-      height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      .swiper-container {
       width: 100%;
-      display: flex;
-      justify-content: space-around;
-      background-image: url("../assets/sabina-ciesielska.jpg");
-      background-size:cover;
-      margin-bottom: 30px
+      height: 80%;
+          .swiper-slide {
+            background-image: url('../assets/edrece-stansberry.jpg');
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+            h1{
+              font-size: 40px;
+              color: white;
+            }
+            p{
+              text-align: left;
+              padding: 90px;
+              color: white;
+              font-weight: bold;
+            }
+      }  
     }
   }
-  }
+ }
 }
 
  /* SCROLLBAR */
